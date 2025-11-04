@@ -3,10 +3,12 @@
 ## Pasos de instalación
 # 1. proceso para levantar las maquinas:
 vagrant up web.
+
 vagrant up db.
 
 # 2.IPs usadas:
 Web → 192.168.56.10.
+
 DB → 192.168.56.11.
 
 # 3.Navegador:
@@ -17,4 +19,5 @@ http://192.168.56.10/info.php → conexión PHP ↔ PostgreSQL
 
 # 4. Scripts utilizados:
 provision-web.sh: instala Apache, PHP y php-pgsql, y copia el contenido de www/ a /var/www/html.
+
 provision-db.sh: instala PostgreSQL, crea el usuario appuser, la base appdb, y una tabla productos con datos de ejemplo.
