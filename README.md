@@ -1,12 +1,20 @@
 # Taller Vagrant + Provisionamiento con Shell- Nicolas Rojas Cabal- 2226088
 
-## Pasos
-1. Clonar este repositorio.
-2. Ejecutar `vagrant up` para levantar las máquinas.
-3. Acceder a la máquina web en: http://192.168.56.10
-4. Verificar `index.html` y `info.php`.
+## Pasos de instalación
+# 1. proceso para levantar las maquinas:
+vagrant up web
+vagrant up db
 
-## Reto
-- Completar `provision-db.sh` para instalar PostgreSQL.
-- Crear una base de datos y tabla.
-- Conectar la página PHP a la base de datos y mostrar datos.
+# 2.IPs usadas:
+Web → 192.168.56.10
+DB → 192.168.56.11
+
+# 3.Navegador:
+http://192.168.56.10 → index.html
+<img width="446" height="302" alt="image" src="https://github.com/user-attachments/assets/5ea0868a-a28b-4e7d-86ad-665f1a08f0c4" />
+http://192.168.56.10/info.php → conexión PHP ↔ PostgreSQL
+<img width="656" height="340" alt="image" src="https://github.com/user-attachments/assets/3fc5da22-e6bd-4256-9450-365e73459879" />
+
+# 4. Scripts utilizados:
+provision-web.sh: instala Apache, PHP y php-pgsql, y copia el contenido de www/ a /var/www/html.
+provision-db.sh: instala PostgreSQL, crea el usuario appuser, la base appdb, y una tabla productos con datos de ejemplo.
